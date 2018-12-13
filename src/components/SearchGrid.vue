@@ -44,7 +44,12 @@
           target="new"
           class="search-grid_image-ctr"
         >
-          <img class="search-grid_image" :src="getImageUrl(image)" @error="onImageLoadError">
+          <img
+            class="search-grid_image"
+            :src="getImageUrl(image)"
+            @error="onImageLoadError"
+            :alt="image.title"
+          >
         </a>
         <figcaption class="search-grid_item-overlay search-grid_item-overlay__top">
           <license-icons :image="image"></license-icons>
